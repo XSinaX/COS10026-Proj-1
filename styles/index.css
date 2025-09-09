@@ -9,7 +9,7 @@ body {
 .container {
     width: 100%;
     position: relative;
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -109,16 +109,64 @@ check if this fonts are imported correctly */
 }
 
 main {
+    padding: 50px 15%;
     flex: 1;
+    background-color: #0c0d0d;
+}
+
+main h2 {
+    font-family: 'Montserrat', 'Open sans', 'sans-serif';
+    text-align: center;
+    font-size: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    place-items: center;
+}
+
+.grid a {
+    text-decoration: none;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.grid a:hover {
+    background-color: black;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-image {
+    border-radius: 10px;
+}
+
+.card-title {
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    padding: 0px;
+    margin: 0px;
 }
 
 footer {
     width: 100%;
     display: flex;
-    gap: 40px;
-    padding: 0 15%;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
     background-color: #28292a;
 }
+
 footer a {
     text-decoration: none;
     color: cyan;

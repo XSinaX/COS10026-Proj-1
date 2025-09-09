@@ -52,7 +52,7 @@ check if this fonts are imported correctly */
 .paragraph {
     font-family: 'Montserrat', 'Open sans', 'sans-serif';
     font-size: 18px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 25px;
     letter-spacing: 0.5px;
 }
@@ -81,7 +81,7 @@ check if this fonts are imported correctly */
 
 .hero h2 {
     font-size: 25px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 25px;
 }
 

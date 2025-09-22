@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+</head>
+
+<body>
+ <h1>Application Form</h1>
+ 
+    <form action="submit.php" method="post"></form>
+        <fieldset>
+            <legend> Job Reference Number</legend>
+                <label for="JobRefNum">Job Reference Number:</label>
+                    <input type="text" id="JobRefNum" name="JobRefNum" required
+                    required 
+                    maxlength="5" minlength="5"
+                    pattern="^[A-Za-z0-9]{5}$"
+                    title="Exactly 5 letters or numbers, e.g., A1B2C" />
+
+                    <div id="jobDescription" style="margin-top:1rem; font-style:italic; color:#333;"></div>
+
+                        <script>
+                        const jobDescriptions = {
+                            "ABCDE": "Web Developer — Build and maintain government websites.",
+                            "12345": "Data Analyst — Handle big datasets and produce reports.",
+                        };
+
+                        const jobRefInput = document.getElementById("JobRefNum");
+                        const jobDescDiv = document.getElementById("jobDescription");
+
+                        jobRefInput.addEventListener("input", function () {
+                            const code = jobRefInput.value.toUpperCase(); // normalize case
+                            if (jobDescriptions[code]) {
+                            jobDescDiv.textContent = jobDescriptions[code];
+                            } else {
+                            jobDescDiv.textContent = "Not Found"; // clear if no match
+                            }
+                        });
+                        </script>
+        </fieldset>
+
+        <fieldset>
+        <legend>Personal Information</legend>   
+
+            <label for="FirstName">First Name:</label>
+                <input type="text" id="FirstName" name="FirstName" required
+                required maxlength="20" 
+                pattern="^[A-Za-z]{1,20}$" 
+                title="Letters only, up to 20 characters"
+
+            <label for="LastName">Last Name:</label>        
+                <input type="text" id="LastName" name="LastName" required
+                required maxlength="20" 
+                pattern="^[A-Za-z]{1,20}$" 
+                title="Letters only, up to 20 characters"
+
+            <label for="DateOfBirth">Date of Birth</label>
+                <input type="date" id="DateOfBirth" name="DateOfBirth" required>
+                <br><br>
+
+                <p>Gender <span style="color:red">*</span></p>
+                <input type="radio" id="gender-f" name="gender" value="Female" required>
+                <label for="gender-f">Female</label><br>
+
+                <input type="radio" id="gender-m" name="gender" value="Male">
+                <label for="gender-m">Male</label><br>
+
+                <input type="radio" id="gender-x" name="gender" value="Non-binary / X">
+                <label for="gender-x">Non-binary / X</label><br>
+
+                <input type="radio" id="gender-na" name="gender" value="Prefer not to say">
+                <label for="gender-na">Prefer not to say</label>
+            <br><br>
+
+        </fieldset>
+</body>
+</html>

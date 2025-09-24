@@ -35,11 +35,6 @@ fieldset{
   margin:14px 0;
 }
 
-/* Inputs consistent but keep your layout */
-input[type="text"],input[type="email"],input[type="date"],select,textarea{
-  padding:10px 12px;border:1px solid #cfd6e3;border-radius:8px;font:inherit;background:#fff
-}
-
 /* The neat grid: two columns of "cells" */
 .grid{
   display:grid;

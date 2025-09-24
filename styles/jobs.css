@@ -11,7 +11,7 @@
     --btn-shadow: 0 8px 18px rgba(37,99,235,.25);
     --radius-lg: 14px;
     --radius-md: 12px;
-}
+}  /*Maybe work on the var names to make easier to find*/
 
 /*---TOP BAR---*/
 .site-header{ background: var(--panel); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10 }
@@ -32,3 +32,42 @@ h1{ margin: 0 0 18px; font-size: clamp(1.3rem, 0.9rem + 1.6vw, 2rem); letter-spa
 
 .content-wrap{ display:block; }
 .content-wrap::after{ content:""; display:block; clear:both; }
+
+/*---ASIDE---*/
+aside.side{
+    width:25%;
+    float:right;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    margin: 0 0 20px 20px; 
+    box-shadow: var(--shadow);
+}
+.side h3{ margin: 0 0 10px }
+.side p{ color:#3b4754; margin: 0 0 14px; line-height:1.5 }
+.btn{ display:inline-block; text-decoration:none; background: var(--primary); color:#fff; border-radius: 10px; padding:10px 14px; font-weight:800; box-shadow: var(--btn-shadow) }
+
+.jobs{ margin-right: 28%; } /*Maybe should play a bit more with it if enough time, can't go lower than 25%*/
+
+/*---JOB SECTION---*/
+.job-head{ display:flex; align-items:flex-start; justify-content:space-between; gap: 14px; margin-bottom: 6px }
+.job-title{ font-size: 1.15rem; font-weight: 800; margin:0 }
+.job-ref{ background: var(--badge-bg); color: var(--badge-ink); border: 1px solid #cfe0ff; padding:6px 10px; border-radius: 999px; font-weight:700; font-size:.8rem; white-space:nowrap }
+
+.job-tagline{ color: #364152; margin: 6px 0 14px; line-height:1.4 }
+
+.info-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; background: #fbfdff; border:1px solid var(--line); border-radius: var(--radius-md); padding: 12px; }
+.info-item{ background:#fff; border:1px dashed #e6eefc; border-radius: 10px; padding: 10px 12px }
+.label{ color: var(--muted); font-size:.8rem; font-weight:700; letter-spacing:.28px; text-transform: uppercase }
+.value{ margin-top: 4px; font-weight:800 }
+
+.section-title{ margin: 18px 0 8px; font-size: 1rem }
+ul{ margin:0; padding-left: 22px }
+li{ margin: 7px 0; color:#1f2937 }
+
+.req-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px }
+.req-col{ border:1px solid var(--line); border-radius: var(--radius-md); padding: 12px; background:#fbfdff }
+.req-col h4{ margin: 0 0 8px; font-size:.95rem }
+.req-col ol{ margin:0; padding-left: 20px }
+.req-col li{ margin: 6px 0; color:#1f2937 }

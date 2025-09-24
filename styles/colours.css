@@ -7,6 +7,11 @@
     --text-primary: hsl(0, 0%, 5%);
     --text-secondary: hsl(0, 0%, 30%);
 
+    --btn-colour: #225fecff;
+    --btn-colour-hover: #0f3ca7ff;
+
+    --form-border: #dee1e6ff;
+
     --bg-main-section: radial-gradient(
         circle,
         rgba(242, 242, 242, 1) 0%,

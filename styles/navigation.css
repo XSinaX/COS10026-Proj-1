@@ -5,13 +5,12 @@ nav {
 
     margin: 0 auto;
     padding: 0px 40px;
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
 
-    background-color: var(--bg-light);
-
-    box-sizing: border-box;
+    background-color: var(--bg);
 }
 
 nav div {
@@ -25,7 +24,7 @@ nav div {
 nav div a {
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: var(--bg-light);
+    box-sizing: border-box;
 }
 
 nav div a:hover {

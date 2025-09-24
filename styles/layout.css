@@ -1,9 +1,10 @@
 body {
-    background: var(--bg-main-section);
+    background: var(--bg-dark);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }

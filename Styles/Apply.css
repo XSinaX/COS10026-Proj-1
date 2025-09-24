@@ -108,6 +108,6 @@ label{ font-weight:600; color:#111; }
 /* Action row for submit button */
 .actions {
   display: flex;
-  justify-content: flex-end;  /* pushes button to the right */
+  justify-content: center; 
   margin-top: 12px;
 }

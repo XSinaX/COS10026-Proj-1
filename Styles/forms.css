@@ -1,0 +1,29 @@
+fieldset,
+form,
+input,
+select {
+    border-radius: 6px;
+    border-width: 2px;
+    border-color: var(--form-border);
+    border-style: solid;
+}
+
+input,
+select {
+    height: 45px;
+}
+
+input,
+select {
+    padding-left: 10px;
+}
+
+fieldset {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+legend {
+    padding: 0px 0px 10px 0px;
+}

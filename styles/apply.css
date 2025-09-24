@@ -1,0 +1,40 @@
+.form-title {
+  text-align: center;
+  margin-top: 0;
+}
+
+body {
+  background: #809eda; /* light grey background like a desk */
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* The fake A4 page */
+.a4-sheet {
+  width: 210mm;          /* true A4 width */
+  min-height: 297mm;     /* true A4 height */
+  background: #fff;
+  margin: 0 auto;        /* center it */
+  padding: 20mm;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* When printing, keep it exact A4 */
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  body { background: #fff; }
+  .a4-sheet {
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    width: auto;
+    min-height: auto;
+    padding: 15mm;
+  }
+}

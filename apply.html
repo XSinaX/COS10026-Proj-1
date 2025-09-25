@@ -39,30 +39,8 @@
                         <label for="JobRefNum">Job Reference Number:</label>
                         <input type="text" id="JobRefNum" name="JobRefNum" required
                                 required maxlength="5" minlength="5"pattern="^[A-Za-z0-9]{5}$" title="Exactly 5 letters or numbers, e.g., A1B2C" />
-
-                                <div id="jobDescription" style="margin-top:1rem; font-style:italic; color:#333;"></div>
-                                        
-                                <!-- I really wanted to add a drop box that stated the job description (ask if this is allowed) -->
-                                    <script>
-                                        const jobDescriptions = {
-                                            "ABCDE": "Web Developer — Build and maintain government websites.",
-                                            "12345": "Data Analyst — Handle big datasets and produce reports.",
-                                        };
-
-                                        const jobRefInput = document.getElementById("JobRefNum");
-                                        const jobDescDiv = document.getElementById("jobDescription");
-
-                                        jobRefInput.addEventListener("input", function () {
-                                            const code = jobRefInput.value.toUpperCase(); // normalize case
-                                            if (jobDescriptions[code]) {
-                                            jobDescDiv.textContent = jobDescriptions[code];
-                                            } else {
-                                            jobDescDiv.textContent = "Not Found"; // clear if no match
-                                            }
-                                        });
-                                    </script>
                     </div>
-
+                    <br>
                     <div class="grid">
                         <div class="cell"> 
                             <label for="FirstName">First Name:</label>

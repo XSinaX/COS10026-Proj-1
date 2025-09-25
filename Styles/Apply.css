@@ -18,14 +18,7 @@ body{
   box-sizing:border-box;
 }
 
-/* Form title */
-.form-title{
-  text-align:center;
-  margin:0 0 10mm 0;
-  font-size:28px;
-}
-
-/* Make fieldsets and legend look tidy on a form */
+/* Make fieldsets and Labels look tidy on a form */
 legend{font-weight:700;padding:0 6px}
 fieldset{
   background:#f7f9fc;
@@ -34,22 +27,25 @@ fieldset{
   padding:18px;
   margin:14px 0;
 }
+.form-title{
+  text-align:center;
+  margin:0 0 10mm 0;
+  font-size:28px;
+}
+label{ font-weight:600; color:#111; }
+.small{ color:#6b7280; font-size:13px; }
 
-/* The neat grid: two columns of "cells" */
+/*codes that makes each input type have a cell and grids neat*/
 .grid{
   display:grid;
-  grid-template-columns: 1fr 1fr;   /* two equal columns */
-  gap: 16px 24px;                   /* row gap / column gap */
+  grid-template-columns: 1fr 1fr;  
+  gap: 16px 24px;                   
   align-items:start;
 }
-
-/* Each cell stacks label over control */
 .cell{ display:flex; flex-direction:column; gap:8px; }
-
-/* Full-width cells (e.g., Street Address, textarea) */
 .span-2{ grid-column:1 / -1; }
 
-/* Inputs/selects look consistent */
+/* Inputs/selects types look consistent */
 input[type="text"], input[type="email"], input[type="tel"],
 input[type="date"], select, textarea{
   width:100%;
@@ -61,16 +57,10 @@ input[type="date"], select, textarea{
   box-sizing:border-box;
 }
 textarea{ min-height:110px; resize:vertical; }
-
-/* Labels and tiny helper text */
-label{ font-weight:600; color:#111; }
-.small{ color:#6b7280; font-size:13px; }
-
-/* Radios/checkboxes inline and tidy */
 .options{ display:flex; gap:18px 24px; flex-wrap:wrap; align-items:center; }
 .options label{ font-weight:500; }
 
-/* Submit button */
+/* codes for to make submit button look pretty */
 .apply-btn {
     width: 160px;
     height: 40px;
@@ -83,17 +73,10 @@ label{ font-weight:600; color:#111; }
     border-radius: 6px;
     box-sizing: border-box;
 }
-
 .apply-btn:hover {
     background: var(--btn-colour-hover);
     cursor: pointer;
 }
-
-
-/* Full-width cells already covered by .span-2 */
-.span-2 { grid-column: 1 / -1; }
-
-/* Action row for submit button */
 .actions {
   display: flex;
   justify-content: center; 

@@ -376,7 +376,7 @@ dl.team > dd {
 
 /* table */
 .personal-touches-container {
-    padding: 33px;
+    padding: 3%;
     background: var(--bg-gray);
     width: 100%;
     max-width: 1000px;

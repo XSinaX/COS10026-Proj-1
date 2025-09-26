@@ -421,3 +421,8 @@ thead th {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     place-items: center;
 }
+
+.fixed-size {
+    width: 400px;
+    height: 400px;
+}

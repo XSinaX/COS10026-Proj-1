@@ -21,6 +21,7 @@ footer {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* AI suggestion */
     justify-items: center;
 
     gap: 20px;
@@ -28,11 +29,13 @@ footer {
     margin: 0 auto;
     padding: 150px 9% 0px 9%;
 }
+
 .landing-hero img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 .landing-hero h1,
 .landing-hero h2 {
     text-align: center;
@@ -103,7 +106,11 @@ footer div a:hover {
 
 .apply-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(260px, 1fr)
+    ); /* AI suggestion */
+
     gap: 16px 24px;
 }
 
@@ -124,7 +131,6 @@ footer div a:hover {
 
     color: var(--bg-light);
     background: var(--btn-colour);
-    opacity: 1;
     border: none;
     border-radius: 6px;
 }
@@ -142,7 +148,11 @@ footer div a:hover {
 
 .options-grid-top {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(100px, 1fr)
+    ); /* AI suggestion */
+
     gap: 8px 16px;
 }
 
@@ -160,12 +170,14 @@ footer div a:hover {
 .options-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* AI suggestion */
+
     gap: 8px 16px;
 }
 
 .options-grid label {
     display: grid;
-    grid-template-columns: 1.25em 1fr;
+    grid-template-columns: 1.25em 1fr; /* AI suggestion */
     align-items: center;
     column-gap: 8px;
 }
@@ -201,13 +213,11 @@ footer div a:hover {
     margin: 0px 0px 35px 0px;
 }
 
-/* TODO check from here to end */
-
 .content-wrap {
     display: block;
 }
 .content-wrap::after {
-    content: '';
+    content: ''; /* AI suggestion */
     display: block;
     clear: both;
 }
@@ -244,8 +254,8 @@ footer div a:hover {
     padding: 6px 10px;
     border-radius: 999px;
     font-weight: 700;
-    font-size: 0.8rem;
-    white-space: nowrap;
+    font-size: 0.8rem; /* AI suggestion */
+    white-space: nowrap; /* AI suggestion */
 }
 
 .job-tagline {
@@ -285,10 +295,12 @@ footer div a:hover {
     margin: 18px 0 8px;
     font-size: 1rem;
 }
+
 ul {
     margin: 0;
     padding-left: 22px;
 }
+
 li {
     margin: 7px 0;
     color: #1f2937;
@@ -296,9 +308,13 @@ li {
 
 .req-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    ); /* AI suggestion */
     gap: 14px;
 }
+
 .req-col {
     border: 1px solid var(--line);
     border-radius: var(--radius-md);
@@ -319,7 +335,7 @@ li {
 }
 
 .jobs {
-    width: calc(75% - 20px);
+    width: calc(75% - 20px); /* AI suggestion */
 }
 
 /*---CARDS---*/
@@ -332,6 +348,7 @@ li {
 }
 
 /* About styles */
+
 /* definition list */
 .team {
     width: 100%;
@@ -343,14 +360,13 @@ li {
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
-    color: #2460ecff;
+    color: var(--btn-colour);
 }
 
 .dl-titles {
     font-size: 18px;
     line-height: 28px;
     font-weight: 500;
-    color: #171a1fff;
 }
 
 dd > dl > dd {
@@ -366,7 +382,7 @@ dd > dl > dd {
 
 .team > dd > dl {
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: max-content 1fr; /* AI suggestion */
     gap: 0.25rem 1rem;
 }
 

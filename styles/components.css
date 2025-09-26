@@ -417,7 +417,7 @@ thead th {
 .team-photo {
     border: 1px solid var(--muted);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    place-items: center;
 }

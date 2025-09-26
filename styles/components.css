@@ -1,6 +1,11 @@
 header {
     flex: 0 0 auto;
 }
+
+main {
+    flex: 1 0 auto;
+}
+
 footer {
     flex: 0 0 auto;
 }
@@ -19,7 +24,6 @@ footer {
 
     margin: 0 auto;
     padding: 150px 100px 0px 100px;
-    box-sizing: border-box;
 }
 .landing-hero img {
     width: 100%;
@@ -56,8 +60,6 @@ footer {
 
     background-color: var(--bg-light);
     color: var(--text-secondary);
-
-    box-sizing: border-box;
 }
 
 footer div {
@@ -74,4 +76,200 @@ footer div a:hover {
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
+}
+
+/* Apply page styles */
+
+.apply-hero {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 50px 0px;
+    background: var(--bg);
+}
+
+.apply-form {
+    width: 100%;
+    max-width: 960px;
+
+    margin: 0px auto;
+    padding: 50px 75px;
+
+    box-sizing: border-;
+}
+
+.apply-form h1 {
+    text-align: center;
+}
+
+.apply-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px 24px;
+}
+
+.apply-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.span-2 {
+    grid-column: 1 / -1;
+}
+
+/* codes for to make submit button look pretty */
+.apply-btn {
+    width: 160px;
+    height: 40px;
+    padding: 0 12px;
+
+    color: var(--bg-light);
+    background: var(--btn-colour);
+    opacity: 1;
+    border: none;
+    border-radius: 6px;
+}
+
+.apply-btn:hover {
+    background: var(--btn-colour-hover);
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px 16px;
+}
+
+.options-grid label {
+    display: grid;
+    grid-template-columns: 1.25em 1fr;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.options-grid input {
+    margin: 0;
+}
+
+/* Job Listings styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--bg-light);
+    padding: 40px;
+}
+
+.about-hero {
+    max-width: 1200px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    padding: 5%;
+    background: var(--bg-light);
+}
+
+.about-hero h2 {
+    margin: 0px 0px 35px 0px;
+}
+
+/* definition list */
+.team {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px 0px 100px 0px;
+}
+
+.names {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #2460ecff;
+}
+
+.dl-titles {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #171a1fff;
+}
+
+dd > dl > dd {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.team > dd {
+    margin: 0 0 1rem 0;
+}
+
+.team > dd > dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.25rem 1rem;
+}
+
+dl.team > dt,
+dl.team > dd {
+    border-left: 3px solid #225fecff;
+    padding-left: 12px;
+}
+
+/* table */
+.personal-touches-container {
+    padding: 33px;
+    background: var(--bg-gray);
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.personal-touches-container h2 {
+    margin-top: 0px;
+}
+
+.bg-white {
+    background: var(--bg-light);
+}
+
+table {
+    padding: 14px 24px;
+    border: 1px solid var(--form-border);
+    border-collapse: collapse;
+}
+
+tbody td,
+thead th {
+    line-height: 50px;
+    padding: 0 12px;
+    border-bottom: 1px solid var(--form-border);
+}
+
+/* team photo */
+
+.team-photos-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 100px;
+}
+
+.team-photo {
+    border: 1px solid var(--muted);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

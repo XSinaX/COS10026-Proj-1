@@ -12,16 +12,31 @@ h1 {
 }
 
 h2 {
-    font-size: 44px;
-    line-height: 60px;
-    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
 }
 p {
     font-size: 18px;
     line-height: 28px;
     font-weight: 400;
 }
+
 a {
     color: var(--text-primary);
     text-decoration: none;
+}
+
+label,
+legend {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+th {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    text-align: left;
 }

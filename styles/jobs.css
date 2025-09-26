@@ -1,93 +1,124 @@
-/*---MAIN VAR---*/
-:root{
-    --bg: #f5f7fb;
-    --panel: #ffffff;
-    --ink: #0f172a;
-    --muted: #5b6472;
-    --line: #e6eaf0;
-    --shadow: 0 8px 24px rgba(15,23,42,.06);
-    --primary: #2563eb;
-    --badge-bg: #eaf2ff;
-    --badge-ink: #2551b9;
-    --btn-shadow: 0 8px 18px rgba(37,99,235,.25);
-    --radius-lg: 14px;
-    --radius-md: 12px;
-}  /*Maybe work on the var names to make easier to find*/
-
-/*---TEXT BOXES---*/
-*{ box-sizing: border-box }
-html, body{ height:100% }
-body{
-    margin:0;
-    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-    color: var(--ink);
-    background: var(--bg);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.content-wrap {
+    display: block;
+}
+.content-wrap::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
-.container{ max-width: 1100px; margin: 0 auto; padding: 0 20px }
-
-/*---TOP BAR---*/
-.site-header{ background: var(--panel); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10 }
-.nav{ display:flex; align-items:center; justify-content:space-between; gap: 16px; padding: 14px 0 }
-.brand{ display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px }
-.brand svg{ width:22px; height:22px; color: var(--primary) }
-
-.menu{ display:flex; gap:18px; align-items:center; color:#475569 }
-.menu a{ text-decoration:none; color:#475569; font-weight:600; font-size:.95rem }
-.menu a.active{ color: var(--primary) }
-
-.cta{ text-decoration:none; background: var(--primary); color: #fff; padding:10px 14px; border-radius: 10px; font-weight:700; box-shadow: var(--btn-shadow) }
-.cta:hover{ filter: brightness(0.98) }
-
-main{ padding: 28px 0 40px }
-h1{ margin: 0 0 18px; font-size: clamp(1.3rem, 0.9rem + 1.6vw, 2rem); letter-spacing:.2px }
-
-.content-wrap{ display:block; }
-.content-wrap::after{ content:""; display:block; clear:both; }
-
 /*---ASIDE---*/
-aside.side{
-    width:25%;
-    float:right;
+aside.side {
+    width: 25%;
+    float: right;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     padding: 14px;
-    margin: 0 0 20px 20px; 
+    margin: 0 0 20px 20px;
     box-shadow: var(--shadow);
 }
-.side h3{ margin: 0 0 10px }
-.side p{ color:#3b4754; margin: 0 0 14px; line-height:1.5 }
-.btn{ display:inline-block; text-decoration:none; background: var(--primary); color:#fff; border-radius: 10px; padding:10px 14px; font-weight:800; box-shadow: var(--btn-shadow) }
 
 /*---JOB SECTION---*/
-.job-head{ display:flex; align-items:flex-start; justify-content:space-between; gap: 14px; margin-bottom: 6px }
-.job-title{ font-size: 1.15rem; font-weight: 800; margin:0 }
-.job-ref{ background: var(--badge-bg); color: var(--badge-ink); border: 1px solid #cfe0ff; padding:6px 10px; border-radius: 999px; font-weight:700; font-size:.8rem; white-space:nowrap }
+.job-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 6px;
+}
+.job-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin: 0;
+}
+.job-ref {
+    background: var(--badge-bg);
+    color: var(--badge-ink);
+    border: 1px solid #cfe0ff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
 
-.job-tagline{ color: #364152; margin: 6px 0 14px; line-height:1.4 }
+.job-tagline {
+    color: #364152;
+    margin: 6px 0 14px;
+    line-height: 1.4;
+}
 
-.info-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; background: #fbfdff; border:1px solid var(--line); border-radius: var(--radius-md); padding: 12px; }
-.info-item{ background:#fff; border:1px dashed #e6eefc; border-radius: 10px; padding: 10px 12px }
-.label{ color: var(--muted); font-size:.8rem; font-weight:700; letter-spacing:.28px; text-transform: uppercase }
-.value{ margin-top: 4px; font-weight:800 }
+.info-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    background: var(--bg-light-blue);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 12px;
+}
+.info-item {
+    background: #fff;
+    border: 1px dashed #e6eefc;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+.label {
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+}
+.value {
+    margin-top: 4px;
+    font-weight: 800;
+}
 
-.section-title{ margin: 18px 0 8px; font-size: 1rem }
-ul{ margin:0; padding-left: 22px }
-li{ margin: 7px 0; color:#1f2937 }
+.section-title {
+    margin: 18px 0 8px;
+    font-size: 1rem;
+}
+ul {
+    margin: 0;
+    padding-left: 22px;
+}
+li {
+    margin: 7px 0;
+    color: #1f2937;
+}
 
-.req-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px }
-.req-col{ border:1px solid var(--line); border-radius: var(--radius-md); padding: 12px; background:#fbfdff }
-.req-col h4{ margin: 0 0 8px; font-size:.95rem }
-.req-col ol{ margin:0; padding-left: 20px }
-.req-col li{ margin: 6px 0; color:#1f2937 }
+.req-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+.req-col {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    background: #fbfdff;
+}
+.req-col h4 {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+}
+.req-col ol {
+    margin: 0;
+    padding-left: 20px;
+}
+.req-col li {
+    margin: 6px 0;
+    color: #1f2937;
+}
 
-.jobs{ margin-right: 28%; } /*Maybe should play a bit more with it if enough time, can't go lower than 25%*/
+.jobs {
+    margin-right: 28%;
+} /*Maybe should play a bit more with it if enough time, can't go lower than 25%*/
 
 /*---CARDS---*/
-.card{
+.card {
     background: var(--panel);
     border: 1px solid var(--line);
     box-shadow: var(--shadow);

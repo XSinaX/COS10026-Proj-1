@@ -10,8 +10,6 @@ nav {
     align-items: center;
 
     background-color: var(--bg-light);
-
-    box-sizing: border-box;
 }
 
 nav div {
@@ -19,7 +17,6 @@ nav div {
     display: flex;
     align-items: center;
     gap: 40px;
-    box-sizing: border-box;
 }
 
 nav div a {

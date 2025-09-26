@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Demonstrates some basic HTML content elements and CSS">
@@ -9,13 +10,15 @@
 
         <link rel="stylesheet" href="styles/colours.css">
         <link rel="stylesheet" href="styles/typography.css">
+        <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/navigation.css">
         <link rel="stylesheet" href="styles/components.css">
+        <link rel="stylesheet" href="styles/forms.css">
+
         <link rel="stylesheet" href="styles/apply.css">
     </head>
 
     <body>
-        
         <header>
             <nav>
                 <a href="index.html" id="logo">
@@ -31,127 +34,131 @@
         </header>
 
         <main class="apply-hero">
-            <div class="a4-sheet">
-                <h1 class="form-title">Job Application Form</h1>
-                <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-                  
-                    <div class="grid">
+            <form class="apply-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+                <h1>Job Application Form</h1>
+
+
+                <div class="apply-grid">
+                    <div class="apply-field">
+                        <label for="FirstName">First Name:</label>
+                        <input type="text" id="FirstName" name="FirstName" required required maxlength="20"
+                            pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters">
+                    </div>
+
+
+                    <div class="apply-field">
+                        <label for="LastName">Last Name:</label>
+                        <input type="text" id="LastName" name="LastName" required required maxlength="20"
+                            pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters">
+                    </div>
+
+                    <div class="apply-field">
                         <label for="JobRefNum">Job Reference Number:</label>
-                        <input type="text" id="JobRefNum" name="JobRefNum" required
-                                required maxlength="5" minlength="5"pattern="^[A-Za-z0-9]{5}$" title="Exactly 5 letters or numbers, e.g., A1B2C" />
-                    </div>
-                    <br>
-                    <div class="grid">
-                        <div class="cell"> 
-                            <label for="FirstName">First Name:</label>
-                                <input type="text" id="FirstName" name="FirstName" required
-                                    required maxlength="20" pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters">
-                        </div>
-                    
-
-                        <div class="cell">
-                            <label for="LastName">Last Name:</label>        
-                                <input type="text" id="LastName" name="LastName" required
-                                    required maxlength="20" pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters">
-                        </div>
-
-                        <div class="cell">
-                            <label for="DateOfBirth">Date of Birth:</label>
-                                <input type="date" id="DateOfBirth" name="DateOfBirth" required>
-                        </div>
-
-                        <fieldset class="cell">
-                            <legend>Gender</legend>
-                                <div class="options">
-                                    <label><input type="radio" name="gender" value="Male" /> Male</label>
-                                    <label><input type="radio" name="gender" value="Female" /> Female</label>
-                                    <label><input type="radio" name="gender" value="Other" /> Non-Binary / x</label>
-                                    <label><input type="radio" name="gender" value="Unkown" /> Prefer not to say</label>
-                                </div>
-                        </fieldset>
-                    
-                        <div class="cell-span-2">
-                            <label for="StreetAddress">Street Address:</label>        
-                            <input type="text" id="StreetAddress" name="StreetAddress" required
-                                    required maxlength="40" > 
-                        </div>
-
-                        <div class="cell">
-                            <label for="Suburb/Town">Suburb/Town:</label>        
-                                    <input type="text" id="Suburb/Town" name="Suburb/Town" required
-                                        required maxlength="40" >
-                        </div>
-
-                        <div class="cell">
-                        <label for="Postcode">Postcode:</label>        
-                                <input type="text" id="Postcode" name="Postcode" required   
-                                    minlength="4" maxlength="4" pattern="^\d{4}$" inputmode="numeric" title="Postcode must be exactly 4 digits, e.g., 3000">
-                        </div>
-
-                        <div class="cell">
-                            <label for="State">State:</label>
-                                <select id="State" name="State" required>
-                                    <option value="">Please Select Option</option>
-                                    <option value="VIC">VIC</option>
-                                    <option value="NSW">NSW</option>
-                                    <option value="QLD">QLD</option>
-                                    <option value="WA">WA</option>
-                                    <option value="SA">SA</option>
-                                    <option value="TAS">TAS</option>
-                                    <option value="ACT">ACT</option>
-                                    <option value="NT">NT</option>
-                                </select>
-                        </div>
-
-                        <div class="cell">
-                            <label for="Email">Email:</label>        
-                                <input type="email" id="Email" name="Email" required maxlength="40" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address"> 
-                        </div>
-
-                        <div class="cell">
-                            <label for="PhoneNumber">Phone Number:</label>        
-                                <input type="tel" id="PhoneNumber" name="PhoneNumber"  minlength="8" maxlength="12" pattern="^\d{8,12}$" title="Phone number must be 8 to 12 digits, e.g., 0412345678" required>
-                        </div>
-
-                        <fieldset class="cell span-2">
-                            <legend>Skill List</legend>
-                                <div class="options">
-                                    <label><input type="checkbox" /> Project Management</label>
-                                    <label><input type="checkbox" /> Data Analysis</label>
-                                    <label><input type="checkbox" /> Cloud Computing</label>
-                                    <label><input type="checkbox" /> Software Development</label>
-                                    <label><input type="checkbox" /> Cybersecurity</label>
-                                    <label><input type="checkbox" /> Other skills…</label>
-                                </div>
-                        </fieldset>
-                        
-                        <div class="cell span-2">
-                            <label for="Other Skills:">Define Other Skills: </label>
-                            <textarea id="Other Skills" name="Other Skills" rows="4" cols="40" placeholder="Explain your skills here... "></textarea>
-                        </div>
-
-                        <div class="cell span-2 actions">
-                            <button type="submit" style=" margin:20px auto" class="apply-btn">Submit Application</button>
-                        </div>
+                        <input type="text" id="JobRefNum" name="JobRefNum" required required maxlength="5" minlength="5"
+                            pattern="^[A-Za-z0-9]{5}$" title="Exactly 5 letters or numbers, e.g., A1B2C" />
 
                     </div>
-                </form>
-            </div>
-            <footer>
-                        <p class="footer-text">&copy; 2024 GovConnect. All rights reserved.</p>
-                        <div>
-                            <a
-                                href="https://1909thuvu.atlassian.net/jira/software/projects/G6CAWP/boards/34/backlog?epics=visible&selectedIssue=G6CAWP-17">
-                                <p class="footer-text">Jira</p>
-                            </a>
-                            <a href="https://github.com/XSinaX/COS10026-Proj-1">
-                                <p class="footer-text">Github</p>
-                            </a>
-                            <a href="mailto:info@GovConnect.com">
-                                <p class="footer-text">Email us</p>
-                            </a>
+
+                    <div class="apply-field">
+                        <label for="DateOfBirth">Date of Birth:</label>
+                        <input type="date" id="DateOfBirth" name="DateOfBirth" required>
+                    </div>
+
+                    <fieldset class="apply-field span-2">
+                        <legend>Gender</legend>
+                        <div class="options-grid">
+                            <label><input type="radio" name="gender" value="Male" /> Male</label>
+                            <label><input type="radio" name="gender" value="Female" /> Female</label>
+                            <label><input type="radio" name="gender" value="Other" /> Non-Binary / x</label>
+                            <label><input type="radio" name="gender" value="Unkown" /> Prefer not to say</label>
                         </div>
-            </footer>
+                    </fieldset>
+
+                    <div class="apply-field span-2">
+                        <label for="StreetAddress">Street Address:</label>
+                        <input type="text" id="StreetAddress" name="StreetAddress" required required maxlength="40">
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="Suburb/Town">Suburb/Town:</label>
+                        <input type="text" id="Suburb/Town" name="Suburb/Town" required required maxlength="40">
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="Postcode">Postcode:</label>
+                        <input type="text" id="Postcode" name="Postcode" required minlength="4" maxlength="4"
+                            pattern="^\d{4}$" inputmode="numeric" title="Postcode must be exactly 4 digits, e.g., 3000">
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="State">State:</label>
+                        <select id="State" name="State" required>
+                            <option value="">Please Select Option</option>
+                            <option value="VIC">VIC</option>
+                            <option value="NSW">NSW</option>
+                            <option value="QLD">QLD</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="ACT">ACT</option>
+                            <option value="NT">NT</option>
+                        </select>
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="Email">Email:</label>
+                        <input type="email" id="Email" name="Email" required maxlength="40"
+                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                            title="Enter a valid email address">
+                    </div>
+
+                    <div class="apply-field">
+                        <label for="PhoneNumber">Phone Number:</label>
+                        <input type="tel" id="PhoneNumber" name="PhoneNumber" minlength="8" maxlength="12"
+                            pattern="^\d{8,12}$" title="Phone number must be 8 to 12 digits, e.g., 0412345678" required>
+                    </div>
+
+                    <fieldset class="apply-field span-2">
+                        <legend>Skill List</legend>
+                        <div class="options-grid">
+                            <label><input type="checkbox" /> Project Management</label>
+                            <label><input type="checkbox" /> Data Analysis</label>
+                            <label><input type="checkbox" /> Cloud Computing</label>
+                            <label><input type="checkbox" /> Software Development</label>
+                            <label><input type="checkbox" /> Cybersecurity</label>
+                            <label><input type="checkbox" /> Other skills…</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="apply-field span-2">
+                        <label for="Other Skills:">Define Other Skills: </label>
+                        <textarea id="Other Skills" name="Other Skills" rows="4" cols="40"
+                            placeholder="Explain your skills here... "></textarea>
+                    </div>
+
+                    <div class="apply-field span-2 actions">
+                        <button type="submit" style=" margin:20px auto" class="apply-btn">Submit
+                            Application</button>
+                    </div>
+
+                </div>
+            </form>
         </main>
+        <footer>
+            <p class="footer-text">&copy; 2024 GovConnect. All rights reserved.</p>
+            <div>
+                <a
+                    href="https://1909thuvu.atlassian.net/jira/software/projects/G6CAWP/boards/34/backlog?epics=visible&selectedIssue=G6CAWP-17">
+                    <p class="footer-text">Jira</p>
+                </a>
+                <a href="https://github.com/XSinaX/COS10026-Proj-1">
+                    <p class="footer-text">Github</p>
+                </a>
+                <a href="mailto:info@GovConnect.com">
+                    <p class="footer-text">Email us</p>
+                </a>
+            </div>
+        </footer>
     </body>
+
 </html>

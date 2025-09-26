@@ -41,21 +41,21 @@
                 <div class="apply-grid">
                     <div class="apply-field">
                         <label for="FirstName">First Name:</label>
-                        <input type="text" id="FirstName" name="FirstName" required required maxlength="20"
+                        <input type="text" id="FirstName" name="FirstName" required maxlength="20"
                             pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters">
                     </div>
 
 
                     <div class="apply-field">
                         <label for="LastName">Last Name:</label>
-                        <input type="text" id="LastName" name="LastName" required required maxlength="20"
+                        <input type="text" id="LastName" name="LastName" required maxlength="20"
                             pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters">
                     </div>
 
                     <div class="apply-field">
                         <label for="JobRefNum">Job Reference Number:</label>
-                        <input type="text" id="JobRefNum" name="JobRefNum" required required maxlength="5" minlength="5"
-                            pattern="^[A-Za-z0-9]{5}$" title="Exactly 5 letters or numbers, e.g., A1B2C" />
+                        <input type="text" id="JobRefNum" name="JobRefNum" required maxlength="5" minlength="5"
+                            pattern="^[A-Za-z0-9]{5}$" title="Exactly 5 letters or numbers, e.g., A1B2C">
 
                     </div>
 
@@ -67,21 +67,21 @@
                     <fieldset class="apply-field span-2">
                         <legend>Gender</legend>
                         <div class="options-grid-top">
-                            <label><input type="radio" name="gender" value="Male" /> Male</label>
-                            <label><input type="radio" name="gender" value="Female" /> Female</label>
-                            <label><input type="radio" name="gender" value="Other" /> Non-Binary / x</label>
-                            <label><input type="radio" name="gender" value="Unkown" /> Prefer not to say</label>
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Non-Binary / x</label>
+                            <label><input type="radio" name="gender" value="Unknown"> Prefer not to say</label>
                         </div>
                     </fieldset>
 
                     <div class="apply-field span-2">
                         <label for="StreetAddress">Street Address:</label>
-                        <input type="text" id="StreetAddress" name="StreetAddress" required required maxlength="40">
+                        <input type="text" id="StreetAddress" name="StreetAddress" required maxlength="40">
                     </div>
 
                     <div class="apply-field">
                         <label for="Suburb/Town">Suburb/Town:</label>
-                        <input type="text" id="Suburb/Town" name="Suburb/Town" required required maxlength="40">
+                        <input type="text" id="Suburb/Town" name="Suburb/Town" required maxlength="40">
                     </div>
 
                     <div class="apply-field">
@@ -121,18 +121,18 @@
                     <fieldset class="apply-field span-2">
                         <legend>Skill List</legend>
                         <div class="options-grid">
-                            <label><input type="checkbox" /> Project Management</label>
-                            <label><input type="checkbox" /> Data Analysis</label>
-                            <label><input type="checkbox" /> Cloud Computing</label>
-                            <label><input type="checkbox" /> Software Development</label>
-                            <label><input type="checkbox" /> Cybersecurity</label>
-                            <label><input type="checkbox" /> Other skills…</label>
+                            <label><input type="checkbox"> Project Management</label>
+                            <label><input type="checkbox"> Data Analysis</label>
+                            <label><input type="checkbox"> Cloud Computing</label>
+                            <label><input type="checkbox"> Software Development</label>
+                            <label><input type="checkbox"> Cybersecurity</label>
+                            <label><input type="checkbox"> Other skills…</label>
                         </div>
                     </fieldset>
 
                     <div class="apply-field span-2">
-                        <label for="Other Skills:">Define Other Skills: </label>
-                        <textarea id="Other Skills" name="Other Skills" rows="4" cols="40"
+                        <label for="OtherSkills">Define Other Skills: </label>
+                        <textarea id="OtherSkills" name="OtherSkills" rows="4" cols="40"
                             placeholder="Explain your skills here... "></textarea>
                     </div>
 

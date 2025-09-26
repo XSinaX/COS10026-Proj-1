@@ -391,10 +391,6 @@ dl.team > dd {
     margin-top: 0px;
 }
 
-.bg-white {
-    background: var(--bg-light);
-}
-
 table {
     padding: 14px 24px;
     border: 1px solid var(--form-border);
@@ -424,12 +420,12 @@ thead th {
     place-items: center;
 }
 
+figure {
+    text-align: center;
+}
+
 .fixed-size {
     width: 400px;
     height: 400px;
     border-radius: 10px;
-}
-
-figure {
-    text-align: center;
 }

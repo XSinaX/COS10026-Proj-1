@@ -1,0 +1,8 @@
+@media (max-width: 600px) {
+    .side {
+        display: none;
+    }
+    .jobs {
+        width: 100%;
+    }
+}

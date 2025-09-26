@@ -1,13 +1,16 @@
 header {
     flex: 0 0 auto;
+    width: 100%;
 }
 
 main {
     flex: 1 0 auto;
+    width: 100%;
 }
 
 footer {
     flex: 0 0 auto;
+    width: 100%;
 }
 
 .landing-hero {
@@ -17,25 +20,22 @@ footer {
     background: url('bg.png') center/cover no-repeat;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-items: center;
 
     gap: 20px;
 
     margin: 0 auto;
-    padding: 150px 100px 0px 100px;
+    padding: 150px 9% 0px 9%;
 }
 .landing-hero img {
     width: 100%;
     height: auto;
     display: block;
 }
-.landing-hero h1 {
-    text-align: center;
-    margin: 0 auto;
-}
-
+.landing-hero h1,
 .landing-hero h2 {
+    text-align: center;
     margin: 0 auto;
 }
 
@@ -48,15 +48,16 @@ footer {
 footer {
     max-width: 1200px;
     width: 100%;
-    height: 55px;
+    height: auto;
+    min-height: 55px;
 
     display: flex;
     text-align: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px 0 20px;
+    margin: 0 auto;
+    padding: 0 1.5%;
 
     background-color: var(--bg-light);
     color: var(--text-secondary);
@@ -85,7 +86,7 @@ footer div a:hover {
     width: 100%;
     margin: 0px auto;
     padding: 50px 0px;
-    background: var(--bg);
+    background: var(--bg-light);
 }
 
 .apply-form {
@@ -118,7 +119,6 @@ footer div a:hover {
     grid-column: 1 / -1;
 }
 
-/* codes for to make submit button look pretty */
 .apply-btn {
     width: 160px;
     height: 40px;
@@ -142,9 +142,26 @@ footer div a:hover {
     margin-top: 12px;
 }
 
+.options-grid-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px 16px;
+}
+
+.options-grid-top label {
+    display: grid;
+    grid-template-columns: 1.25em 1fr;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.options-grid-top input {
+    margin: 0;
+}
+
 .options-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 8px 16px;
 }
 
@@ -182,6 +199,137 @@ footer div a:hover {
     margin: 0px 0px 35px 0px;
 }
 
+/* TODO check from here to end */
+
+.content-wrap {
+    display: block;
+}
+.content-wrap::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*---ASIDE---*/
+.side {
+    width: 25%;
+    float: right;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    margin: 0 0 20px 20px;
+    box-shadow: var(--shadow);
+}
+
+/*---JOB SECTION---*/
+.job-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 6px;
+}
+.job-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin: 0;
+}
+.job-ref {
+    background: var(--badge-bg);
+    color: var(--badge-ink);
+    border: 1px solid #cfe0ff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.job-tagline {
+    color: #364152;
+    margin: 6px 0 14px;
+    line-height: 1.4;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    background: var(--bg-light-blue);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 2%;
+}
+.info-item {
+    background: #fff;
+    border: 1px dashed #e6eefc;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+.label {
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+}
+.value {
+    margin-top: 4px;
+    font-weight: 800;
+}
+
+.section-title {
+    margin: 18px 0 8px;
+    font-size: 1rem;
+}
+ul {
+    margin: 0;
+    padding-left: 22px;
+}
+li {
+    margin: 7px 0;
+    color: #1f2937;
+}
+
+.req-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+}
+.req-col {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    background: #fbfdff;
+}
+.req-col h4 {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+}
+.req-col ol {
+    margin: 0;
+    padding-left: 20px;
+}
+.req-col li {
+    margin: 6px 0;
+    color: #1f2937;
+}
+
+.jobs {
+    width: calc(75% - 20px);
+}
+
+/*---CARDS---*/
+.card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius-lg);
+    padding: 18px 18px 14px;
+}
+
+/* About styles */
 /* definition list */
 .team {
     width: 100%;

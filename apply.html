@@ -15,11 +15,11 @@
         <link rel="stylesheet" href="styles/components.css">
         <link rel="stylesheet" href="styles/forms.css">
         <link rel="stylesheet" href="styles/responsive.css">
-
     </head>
 
     <body>
         <header>
+            <!--NAV-->
             <nav>
                 <a href="index.html" id="logo">
                     <img src="images/logo.svg" alt="GovConnect Logo" width="60" height="60">
@@ -31,64 +31,67 @@
                 </div>
             </nav>
         </header>
-
+        <!--MAIN-->
         <main class="apply-hero">
+            <!--APP FORM-->
             <form class="apply-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
                 <h1>Job Application Form</h1>
-
-
+                <!--FIRST NAME-->
                 <div class="apply-grid">
                     <div class="apply-field">
                         <label for="FirstName">First Name:</label>
                         <input type="text" id="FirstName" name="FirstName" required maxlength="20"
-                            pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters">
+                            pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters" placeholder="John">
                     </div>
-
-
+                    <!--LAST NAME-->
                     <div class="apply-field">
                         <label for="LastName">Last Name:</label>
                         <input type="text" id="LastName" name="LastName" required maxlength="20"
-                            pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters">
+                            pattern="^[A-Za-z]{1,20}$" title="Letters only, up to 20 characters" placeholder="Doe">
                     </div>
-
+                    <!--REF NUM-->
                     <div class="apply-field">
                         <label for="JobRefNum">Job Reference Number:</label>
                         <input type="text" id="JobRefNum" name="JobRefNum" required maxlength="5" minlength="5"
-                            pattern="^[A-Za-z0-9]{5}$" title="Exactly 5 letters or numbers, e.g., A1B2C">
+                            pattern="^[A-Za-z0-9]{5}$" title="Exactly 5 letters or numbers, e.g., A1B2C"
+                            placeholder="A1B2C">
 
                     </div>
-
+                    <!--DoB-->
                     <div class="apply-field">
                         <label for="DateOfBirth">Date of Birth:</label>
                         <input type="date" id="DateOfBirth" name="DateOfBirth" required>
                     </div>
-
+                    <!--GENDER-->
                     <fieldset class="apply-field span-2">
                         <legend>Gender</legend>
                         <div class="options-grid-top">
-                            <label><input type="radio" name="gender" value="Male"> Male</label>
-                            <label><input type="radio" name="gender" value="Female"> Female</label>
-                            <label><input type="radio" name="gender" value="Other"> Non-Binary / x</label>
-                            <label><input type="radio" name="gender" value="Unknown"> Prefer not to say</label>
+                            <label><input type="radio" name="Gender" value="Male"> Male</label>
+                            <label><input type="radio" name="Gender" value="Female"> Female</label>
+                            <label><input type="radio" name="Gender" value="Other"> Non-Binary / x</label>
+                            <label><input type="radio" name="Gender" value="Unknown"> Prefer not to say</label>
                         </div>
                     </fieldset>
-
+                    <!--STREET-->
                     <div class="apply-field span-2">
                         <label for="StreetAddress">Street Address:</label>
-                        <input type="text" id="StreetAddress" name="StreetAddress" required maxlength="40">
+                        <input type="text" id="StreetAddress" name="StreetAddress" required maxlength="40"
+                            placeholder="John St, Hawthorn VIC 3122">
                     </div>
-
+                    <!--TOWN-->
                     <div class="apply-field">
                         <label for="Suburb/Town">Suburb/Town:</label>
-                        <input type="text" id="Suburb/Town" name="Suburb/Town" required maxlength="40">
+                        <input type="text" id="Suburb/Town" name="Suburb/Town" required maxlength="40"
+                            placeholder="Hawthorn">
                     </div>
-
+                    <!--POSTCODE-->
                     <div class="apply-field">
                         <label for="Postcode">Postcode:</label>
                         <input type="text" id="Postcode" name="Postcode" required minlength="4" maxlength="4"
-                            pattern="^\d{4}$" inputmode="numeric" title="Postcode must be exactly 4 digits, e.g., 3000">
+                            pattern="^\d{4}$" inputmode="numeric" title="Postcode must be exactly 4 digits, e.g., 3000"
+                            placeholder="3122">
                     </div>
-
+                    <!--STATE-->
                     <div class="apply-field">
                         <label for="State">State:</label>
                         <select id="State" name="State" required>
@@ -103,20 +106,21 @@
                             <option value="NT">NT</option>
                         </select>
                     </div>
-
+                    <!--EMAIL-->
                     <div class="apply-field">
                         <label for="Email">Email:</label>
                         <input type="email" id="Email" name="Email" required maxlength="40"
                             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                            title="Enter a valid email address">
+                            title="Enter a valid email address" placeholder="joh.doe@gmail.com">
                     </div>
-
+                    <!--PHONE-->
                     <div class="apply-field">
                         <label for="PhoneNumber">Phone Number:</label>
                         <input type="tel" id="PhoneNumber" name="PhoneNumber" minlength="8" maxlength="12"
-                            pattern="^\d{8,12}$" title="Phone number must be 8 to 12 digits, e.g., 0412345678" required>
+                            pattern="^\d{8,12}$" title="Phone number must be 8 to 12 digits, e.g., 0412345678" required
+                            placeholder="0412345678">
                     </div>
-
+                    <!--SKILLS-->
                     <fieldset class="apply-field span-2">
                         <legend>Skill List</legend>
                         <div class="options-grid">
@@ -128,7 +132,7 @@
                             <label><input type="checkbox"> Other skills…</label>
                         </div>
                     </fieldset>
-
+                    <!--SKILLS OTHER-->
                     <div class="apply-field span-2">
                         <label for="OtherSkills">Define Other Skills: </label>
                         <textarea id="OtherSkills" name="OtherSkills" rows="4" cols="40"
@@ -143,6 +147,7 @@
                 </div>
             </form>
         </main>
+        <!--FOOTER-->
         <footer>
             <p class="footer-text">&copy; 2024 GovConnect. All rights reserved.</p>
             <div>
